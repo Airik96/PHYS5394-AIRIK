@@ -1,0 +1,27 @@
+THE FOLLOWING CODE IS MEANT TO BE USED IN THE MATLAB SOFTWARE:
+%This will be an attempt at plotting a sinusoidal signal
+%PHYS 5394-90L
+%AIRIK SANCHEZ
+
+%set up the frequency of the signal
+signal = 180;
+frequency = signal/60;
+
+repeat = 6;
+f = repeat/60;
+%this frequency will act as the true frequency for our signal, set up time
+%variable that can manipulate signal length
+
+time = 1;
+
+%most wave functions have some kind of amplitude, introduce variable A to 
+%control this
+A = 1;
+
+%begin signal construction
+ind = (1/frequency):(time*repeat*1/f);
+sin_sig = A*sin(2*pi*f*ind);
+
+%plot sin_sig and check if accurate
+plot(sin_sig)
+title('Sinusoidal Signal Test')
